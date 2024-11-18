@@ -9,7 +9,10 @@ def find_missing_number(nums):
     array_sum = sum(nums)
    
     return total_sum - array_sum
+    
+
 
 
 nums = [3, 7, 1, 2, 8, 4, 5]
 print(find_missing_number(nums))  # Output: 6
+
