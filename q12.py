@@ -1,26 +1,21 @@
-#Write a program to check if a string containing brackets is balanced. A string is considered balanced if every opening bracket has a corresponding closing bracket in the correct order.
-def is_balanced(expression):
-    stack=[]
-    bracket={")" :"(","}":"{","]":"["}
+#Write a program to sort a list without using any built-in sort functions.
 
-    for brack in expression:
+
+def selection_sort(arr):
+    n = len(arr)
+    
+    for i in range(n):
+       
+        min_index = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
         
-        if brack in bracket:
-            if not stack:
-                return "Not balanced"
-            top=stack.pop()
-            if bracket[brack]!=top:
-                return "Not balanced"
-        else:
-            stack.append(brack)
-              
-
-    if stack:
-        return "Not balanced"
-    else:
-        return "balanced"      
-print(is_balanced("({[()]})")) 
-print(is_balanced("({[})]"))      
+        arr[i], arr[min_index] = arr[min_index], arr[i]
 
 
+numbers = [64, 25, 12, 22, 11]
+print("Original list:", numbers)
 
+selection_sort(numbers)
+print("Sorted list:", numbers)
