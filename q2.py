@@ -13,12 +13,12 @@ for word in words:
     
     if sorted_word in anagrams:
         anagrams[sorted_word].append(word)
-        print(f"==> {anagrams}")
+        #print(f"==> {anagrams}")
     else:
         
         anagrams[sorted_word] = [word]
 
 
 output = list(anagrams.values())
-print(anagrams)
+# print(anagrams)
 print(output)
